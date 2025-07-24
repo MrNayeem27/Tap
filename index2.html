@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tap Model 1</title>
+        <meta name="description"
+            content="Discover the Prinzia collection of premium quality plastic water taps, CPVC pipe fittings, and modern bathroom accessories. Designed for durability and style by Shree Vaishno Enterprises.">
+        <meta name="keywords"
+            content="Prinzia Taps, Plastic Water Taps, CPVC Fittings, Shree Vaishno Enterprises, Bathroom Fittings">
+
+        <!-- New Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet">
+
+        <!-- Favicon (using one from the original for consistency) -->
+        <link rel="icon"
+            href="https://5.imimg.com/data5/SELLER/Banner/2024/3/400807786/XA/VM/AK/44709364/s.ico">
+
+        <style>
+        /* --- CSS RESET & ROOT VARIABLES --- */
+        :root {
+            --primary-color: #0D47A1;  /* A deep, trustworthy navy blue */
+            --secondary-color: #F9A825; /* A warm, vibrant gold/yellow accent */
+            --light-bg: #F8F9FA;      /* Clean, off-white background */
+            --dark-text: #212529;      /* High-contrast dark text */
+            --light-text: #FFFFFF;     /* White text for dark backgrounds */
+            --muted-text: #6c757d;      /* For less important text */
+            --border-color: #dee2e6;   /* Subtle border color */
+            
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+            --transition-speed: 0.3s ease;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-text);
+            background-color: var(--light-text);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header .subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+
+        /* --- UTILITY CLASSES --- */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            font-size: 0.9rem;
+        }
+
+        .btn--primary {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border-color: var(--primary-color);
+        }
+
+        .btn--primary:hover {
+            background-color: var(--light-text);
+            color: var(--primary-color);
+        }
+
+        .btn--secondary {
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            border-color: var(--secondary-color);
+        }
+
+        .btn--secondary:hover {
+            background-color: #fbc02d; /* Slightly lighter gold */
+            color: var(--dark-text);
+        }
+        
+
+        /* --- HEADER --- */
+        .site-header {
+            background: var(--light-text);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .main-nav a {
+            font-weight: 600;
+            font-family: var(--font-heading);
+            color: var(--dark-text);
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-speed);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: var(--light-bg);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero__content .subtitle {
+            font-weight: 500;
+            color: var(--muted-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero__content h1 {
+            margin-bottom: 1rem;
+        }
+        
+        .hero__content .tagline {
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            color: var(--muted-text);
+        }
+
+        /* --- CATEGORIES SECTION --- */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background-color: var(--light-text);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            text-align: center;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-card__image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-card__title {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        /* --- FEATURED PRODUCTS SECTION --- */
+        .products-section {
+            background-color: var(--light-bg);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .product-card {
+            display: flex;
+            gap: 1.5rem;
+            background-color: var(--light-text);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform var(--transition-speed);
+        }
+
+        .product-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .product-card__image-wrapper {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .product-card__image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .product-card__info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card__name {
+            font-size: 1.25rem;
+            color: var(--dark-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-card__price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card__price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--muted-text);
+        }
+
+        .product-card__description {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text .subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--muted-text);
+        }
+
+        .quality-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .feature-item__icon {
+            background-color: #E3F2FD; /* Light blue */
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-item__text {
+            font-weight: 600;
+            font-family: var(--font-heading);
+        }
+        
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials {
+            background-color: var(--light-bg);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--light-text);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .testimonial-card__quote {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--muted-text);
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        
+        .testimonial-card__quote::before {
+            content: '“';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--border-color);
+            position: absolute;
+            left: -0.5rem;
+            top: -1.5rem;
+            line-height: 1;
+        }
+
+        .testimonial-card__author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+        
+        .author__avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .author__name {
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: var(--dark-text);
+            display: block;
+        }
+        
+        .author__location {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        /* --- CONTACT CTA SECTION --- */
+        .contact-cta {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 5rem 0;
+            background-image: linear-gradient(rgba(13, 71, 161, 0.9), rgba(13, 71, 161, 0.9)), url('https://images.unsplash.com/photo-1596743388713-3a137976e643?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .contact-cta h2 {
+            color: var(--light-text);
+        }
+        
+        .contact-cta .section-header .subtitle {
+            color: var(--secondary-color);
+        }
+
+        .contact-cta__form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--dark-text);
+            font-family: var(--font-body);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(249, 168, 37, 0.4);
+        }
+
+        /* --- FOOTER --- */
+        .site-footer {
+            background-color: var(--dark-text);
+            color: var(--light-bg);
+            padding-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding-bottom: 3rem;
+        }
+        
+        .footer-column h4 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a, .footer-column p {
+            color: var(--border-color);
+            font-size: 0.9rem;
+        }
+        
+        .footer-column a:hover {
+            color: var(--light-text);
+            text-decoration: underline;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--light-bg);
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+        
+        .footer-bottom strong {
+            color: var(--light-bg);
+        }
+        
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .section { padding: 3rem 0; }
+            
+            .header-content { flex-direction: column; gap: 1rem; }
+            .main-nav ul { gap: 1.5rem; }
+            
+            .product-grid { grid-template-columns: 1fr; }
+            .product-card { flex-direction: column; align-items: center; text-align: center; }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-column.about-col {
+                grid-column: 1 / -1; /* Span full width */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+    </style>
+    </head>
+    <body>
+
+        <!-- ======================= HEADER ======================= -->
+        <header class="site-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">PRINZIA</a>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#contact" class="btn btn--secondary">Get a
+                        Quote</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ======================= HERO SECTION ======================= -->
+            <section class="hero">
+                <div class="hero__content container">
+                    <p class="subtitle">By Shree Vaishno Enterprises</p>
+                    <h1>The Flow of Modern Living</h1>
+                    <p class="tagline">Experience the perfect blend of
+                        innovation, durability, and design with our premium
+                        range of water taps and pipe fittings.</p>
+                    <a href="#categories" class="btn btn--primary">Explore Our
+                        Collection</a>
+                </div>
+            </section>
+
+            <!-- ======================= CATEGORIES SECTION ======================= -->
+            <section id="categories" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Our Expertise</p>
+                        <h2>Product Categories</h2>
+                    </div>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-card__image"
+                                style="background-image: url('https://5.imimg.com/data5/SELLER/Default/2024/6/428167740/FF/NV/FF/44709364/whatsapp-image-2024-06-08-at-14-42-35-500x500.jpeg');"></div>
+                            <h3 class="category-card__title">Plastic Water
+                                Taps</h3>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-card__image"
+                                style="background-image: url('https://5.imimg.com/data5/SELLER/Default/2024/10/455651460/VS/BU/LL/44709364/cpvc-plain-socket-prinzia-500x500.jpeg');"></div>
+                            <h3 class="category-card__title">CPVC Pipe
+                                Fittings</h3>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-card__image"
+                                style="background-image: url('https://5.imimg.com/data5/SELLER/Default/2024/4/412360957/RW/QY/IK/44709364/square-ptmt-taps-500x500.jpeg');"></div>
+                            <h3 class="category-card__title">Bathroom
+                                Accessories</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= FEATURED PRODUCTS SECTION ======================= -->
+            <section id="products" class="section products-section">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Our Bestsellers</p>
+                        <h2>Featured Plastic Water Taps</h2>
+                        <p class="muted-text"
+                            style="max-width: 600px; margin: 0 auto;">Providing
+                            you the best range with effective & timely
+                            delivery.</p>
+                    </div>
+                    <div class="product-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img
+                                    src="https://5.imimg.com/data5/SELLER/Default/2024/6/428167740/FF/NV/FF/44709364/whatsapp-image-2024-06-08-at-14-42-35-500x500.jpeg"
+                                    alt="P.T.M.T. Prinzia Tap (Nova Model)">
+                            </div>
+                            <div class="product-card__info">
+                                <h3 class="product-card__name">P.T.M.T. Prinzia
+                                    Tap (Nova Model)</h3>
+                                <p class="product-card__price">₹ 45 <span>/
+                                        Piece</span></p>
+                                <p class="product-card__description">Modern
+                                    design meets robust PTMT material. Ideal for
+                                    contemporary bathroom fittings, ensuring
+                                    longevity and a sleek look.</p>
+                                <a href="#contact"
+                                    class="btn btn--primary">Request Price</a>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-card__image-wrapper">
+                                <img
+                                    src="https://5.imimg.com/data5/SELLER/Default/2023/10/351471688/XA/TG/AD/44709364/pp-swan-neck-tap-prinzia-500x500.jpeg"
+                                    alt="PP Swan Neck Tap Prinzia">
+                            </div>
+                            <div class="product-card__info">
+                                <h3 class="product-card__name">PP Swan Neck Tap
+                                    Prinzia</h3>
+                                <p class="product-card__price">₹ 92 <span>/
+                                        Piece</span></p>
+                                <p class="product-card__description">Elegant
+                                    swan neck design in high-grade PP material.
+                                    Perfect for kitchens and washbasins,
+                                    combining functionality with style.</p>
+                                <a href="#contact"
+                                    class="btn btn--primary">Request Price</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= ABOUT SECTION ======================= -->
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="about-content">
+                        <div class="about-image">
+                            <img
+                                src="https://5.imimg.com/data5/SELLER/Default/2025/6/518271768/XE/CO/TR/44709364/whatsapp-image-2025-06-11-at-1-13-55-pm-1-500x500.jpeg"
+                                alt="Close-up of high-quality pipe fittings">
+                        </div>
+                        <div class="about-text">
+                            <p class="subtitle">Our Promise</p>
+                            <h2>Quality and Trust Since Establishment</h2>
+                            <p><strong>Shree Vaishno Enterprises</strong>, the
+                                force behind the Prinzia brand, is a leading
+                                Manufacturer dedicated to producing superior
+                                plumbing solutions. Based in New Delhi, we
+                                combine innovative technology with the highest
+                                quality materials to deliver products that stand
+                                the test of time.</p>
+                            <p>Our commitment is to provide effective, timely,
+                                and reliable solutions for all your plumbing
+                                needs, backed by exceptional customer
+                                service.</p>
+                            <div class="quality-features">
+                                <div class="feature-item">
+                                    <div class="feature-item__icon">
+                                        <!-- Icon placeholder -->
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"><path
+                                                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.146a.5.5 0 1 1-.708.708L5.5 9.707l-.146.147a.5.5 0 0 1-.708-.708l.5-.5a.5.5 0 0 1 .708 0l.146.146zM6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-1-4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" /></svg>
+                                    </div>
+                                    <span class="feature-item__text">Durable
+                                        Materials</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"><path
+                                                d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-3.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 3.592a1.5 1.5 0 0 1-1.573 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" /></svg>
+                                    </div>
+                                    <span class="feature-item__text">Innovative
+                                        Design</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"><path
+                                                d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 11h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M.5 1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5" /></svg>
+                                    </div>
+                                    <span class="feature-item__text">Timely
+                                        Delivery</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-item__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="20" height="20"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"><path
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.354-5.646a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 11.293l2.646-2.647a.5.5 0 0 1 .708.708z" /></svg>
+                                    </div>
+                                    <span class="feature-item__text">Quality
+                                        Assured</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= TESTIMONIALS SECTION ======================= -->
+            <section class="section testimonials">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Client Feedback</p>
+                        <h2>What Our Customers Say</h2>
+                    </div>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <p class="testimonial-card__quote">The quality of
+                                the CPVC fittings is excellent. Very satisfied
+                                with the product and the prompt delivery service
+                                provided.</p>
+                            <div class="testimonial-card__author">
+                                <div class="author__avatar">M</div>
+                                <div>
+                                    <span class="author__name">Mohit</span>
+                                    <span class="author__location">Hapur, Uttar
+                                        Pradesh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-card__quote">Great products
+                                from a reliable company. The taps are durable
+                                and look very modern in our new construction
+                                project.</p>
+                            <div class="testimonial-card__author">
+                                <div class="author__avatar">D</div>
+                                <div>
+                                    <span class="author__name">Dhanmoni
+                                        Bora</span>
+                                    <span class="author__location">Nagaon,
+                                        Assam</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-card__quote">I was impressed
+                                with the customer service and the overall
+                                quality. The team was helpful in selecting the
+                                right products.</p>
+                            <div class="testimonial-card__author">
+                                <div class="author__avatar">A</div>
+                                <div>
+                                    <span class="author__name">Ajay</span>
+                                    <span class="author__location">Loni, Uttar
+                                        Pradesh</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= CONTACT CTA SECTION ======================= -->
+            <section id="contact" class="section contact-cta">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Let's Connect</p>
+                        <h2>Become a Distributor or Get a Custom Quote</h2>
+                    </div>
+                    <form action="#" class="contact-cta__form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name"
+                                placeholder="e.g., John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                placeholder="e.g., john.doe@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                placeholder="Your contact number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Requirement</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us about your needs. Are you looking for a specific product, bulk pricing, or distributorship opportunities?"
+                                required></textarea>
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit"
+                                class="btn btn--secondary">Submit
+                                Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ======================= FOOTER ======================= -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column about-col">
+                        <a href="#" class="footer-logo">PRINZIA</a>
+                        <p>A brand of <strong>Shree Vaishno
+                                Enterprises</strong>, committed to delivering
+                            excellence in plumbing and bathroom fittings across
+                            India.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16"><path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" /></svg></a>
+                            <a href="#" aria-label="Twitter"><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16"><path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15" /></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16"><path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" /></svg></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Product Lines</h4>
+                        <ul>
+                            <li><a href="#">Plastic Water Taps</a></li>
+                            <li><a href="#">CPVC Pipe Fittings</a></li>
+                            <li><a href="#">UPVC Pipe Fittings</a></li>
+                            <li><a href="#">Bathroom Accessories</a></li>
+                            <li><a href="#">View All</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Parvesh Shukla (Owner)<br>
+                            Alipur, New Delhi, Delhi - 110036
+                        </p>
+                        <p>
+                            <a href="tel:07942538469">Call: 07942538469</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© <span id="year"></span> <strong>Shree Vaishno
+                            Enterprises</strong>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    </body>
+</html>

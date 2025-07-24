@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tap Model 3</title>
+        <meta name="description"
+            content="Explore the Silk Series by Vectus Flow. Premium PTMT plastic taps and bibcocks engineered for durability, modern aesthetics, and flawless performance in any setting.">
+        <meta name="keywords"
+            content="Vectus Flow, Silk Series, PTMT Taps, Plastic Taps, Modern Bibcock, Bathroom Fittings">
+        <link rel="canonical"
+            href="https://www.vectus.in/bathware/ptmt-taps/bathroom-fittings">
+
+        <!-- New Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+            rel="stylesheet">
+
+        <!-- Favicon (using one from the original for consistency) -->
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="https://www.vectus.in/assets/front/files/img/favicon-32x32.png">
+
+        <style>
+        /* --- CSS RESET & ROOT VARIABLES --- */
+        :root {
+            --primary-color: #1a1a1a;   /* Sophisticated charcoal black */
+            --secondary-color: #E63946; /* A refined, energetic red */
+            --accent-color: #F1FAEE;    /* Very light, almost minty-grey background */
+            --light-bg: #FFFFFF;        /* Clean white */
+            --dark-text: #212529;        /* High-contrast dark text */
+            --muted-text: #6c757d;        /* For less important text */
+            --border-color: #e9ecef;     /* Subtle border color */
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+
+            --container-width: 1280px;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s ease;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-header .subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: var(--font-body);
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .btn--primary {
+            background-color: var(--secondary-color);
+            color: var(--light-bg);
+            border-color: var(--secondary-color);
+        }
+
+        .btn--primary:hover {
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        /* --- HEADER --- */
+        .site-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1.25rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .logo span { color: var(--secondary-color); }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .main-nav a {
+            font-weight: 600;
+            color: var(--dark-text);
+            position: relative;
+        }
+        .main-nav a:hover { text-decoration: none; color: var(--primary-color); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: var(--accent-color);
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hero-text .subtitle {
+            font-family: var(--font-body);
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-text .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: var(--muted-text);
+            max-width: 450px;
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            text-align: center;
+        }
+        
+        .hero-image-wrapper img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: var(--border-radius);
+            position: relative;
+            z-index: 2;
+        }
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            transform: rotate(-5deg);
+            z-index: 1;
+            box-shadow: var(--box-shadow);
+        }
+
+        /* --- FEATURES/BENEFITS SECTION --- */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .benefit-card__icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card__title {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .benefit-card__description {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        /* --- PRODUCT GALLERY SECTION --- */
+        #product-gallery {
+            background-color: var(--light-bg);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .gallery-item {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            text-align: center;
+            transition: all var(--transition-speed);
+        }
+        .gallery-item:hover {
+            box-shadow: var(--box-shadow);
+            transform: translateY(-5px);
+        }
+        .gallery-item__image {
+            background-color: #fff;
+            padding: 2rem;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-item__image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .gallery-item__name {
+            font-family: var(--font-body);
+            font-weight: 600;
+            padding: 1rem;
+            background-color: var(--accent-color);
+            color: var(--dark-text);
+        }
+
+        /* --- TECHNICAL DETAILS SECTION --- */
+        .details-section {
+            background-color: var(--accent-color);
+        }
+        .details-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .details-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+        }
+        .details-text h2 {
+            margin-bottom: 1.5rem;
+        }
+        .details-text p {
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .faq-item details {
+            padding: 1.5rem 0;
+        }
+        .faq-item summary {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-color);
+        }
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform var(--transition-speed);
+        }
+        .faq-item details[open] summary::after {
+            transform: rotate(45deg);
+        }
+        .faq-item .faq-answer {
+            padding-top: 1rem;
+            color: var(--muted-text);
+            font-size: 0.95rem;
+        }
+
+        /* --- FOOTER --- */
+        .site-footer {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+        
+        .footer-column h4 {
+            color: var(--light-bg);
+            font-size: 1.1rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a, .footer-column p {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+        
+        .footer-column a:hover {
+            color: var(--light-bg);
+            text-decoration: none;
+        }
+        
+        .footer-logo {
+            font-size: 2.25rem;
+            color: var(--light-bg);
+            margin-bottom: 1rem;
+        }
+        .footer-logo span { color: var(--secondary-color); }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+        .footer-bottom strong { color: var(--accent-color); }
+        
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 992px) {
+            .hero-grid, .details-content {
+                grid-template-columns: 1fr;
+            }
+             .hero-text { text-align: center; }
+             .hero-text .tagline { margin-left: auto; margin-right: auto; }
+             .hero-image-wrapper { margin-top: 3rem; }
+             .details-image { max-width: 400px; margin: 0 auto 2rem auto; }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            .section { padding: 4rem 0; }
+            
+            .header-content { flex-direction: column; gap: 1rem; }
+            .main-nav ul { gap: 1.5rem; }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-column.about-col {
+                grid-column: 1 / -1;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 { font-size: 2.2rem; }
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem 1rem;
+            }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+    </head>
+    <body>
+
+        <!-- ======================= HEADER ======================= -->
+        <header class="site-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="https://www.vectus.in/" class="logo">Vectus
+                        <span>Flow</span></a>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="https://www.vectus.in/products">All
+                                    Products</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#faq">FAQs</a></li>
+                        </ul>
+                    </nav>
+                    <a href="https://www.vectus.in/contact-us"
+                        class="btn btn--primary">Contact Us</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ======================= HERO SECTION ======================= -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div class="hero-text">
+                            <p class="subtitle">Vectus Bathware</p>
+                            <h1>The Silk Series</h1>
+                            <p class="tagline">Discover the elegance of modern
+                                engineering. Our PTMT taps combine the
+                                durability of metal with the versatility of
+                                plastic, finished with a timeless glossy
+                                sheen.</p>
+                            <a href="#gallery" class="btn btn--primary">View
+                                Product Range</a>
+                        </div>
+                        <div class="hero-image-wrapper">
+                            <img
+                                src="https://www.vectus.in/assets/uploads/product_item/f13c47ef98ffafd1c1dc87d3d550a7df.webp"
+                                alt="Vectus Silk Series PTMT Taps">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= FEATURES/BENEFITS SECTION ======================= -->
+            <section id="features" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Why Choose Silk Series</p>
+                        <h2>Engineered for Excellence</h2>
+                    </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">✓</div>
+                            <h3 class="benefit-card__title">Glossy & Durable
+                                Finish</h3>
+                            <p class="benefit-card__description">Combines the
+                                advantages of plastics and metals, offering a
+                                superior glossy finish that resists scratches
+                                and cracks.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">✓</div>
+                            <h3 class="benefit-card__title">Low Maintenance</h3>
+                            <p class="benefit-card__description">The anti-static
+                                material prevents dust deposition and is easily
+                                cleaned with simple soap or detergents.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">✓</div>
+                            <h3 class="benefit-card__title">High
+                                Performance</h3>
+                            <p class="benefit-card__description">Made from
+                                quality-tested PTMT, ensuring a long functional
+                                life with exceptional durability and ease of
+                                operation.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">✓</div>
+                            <h3 class="benefit-card__title">Theft Proof</h3>
+                            <p class="benefit-card__description">A lower resale
+                                value prevents theft for remoulding, making
+                                these taps ideal for both private and public
+                                installations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= PRODUCT GALLERY SECTION ======================= -->
+            <section id="gallery" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Our Collection</p>
+                        <h2>Silk Series Product Range</h2>
+                    </div>
+                    <div class="gallery-grid">
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/1b09d550a5e3b40600aca619f4e51779.png"
+                                    alt="Bib Cock"></div><h4
+                                class="gallery-item__name">Bib Cock</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/3da854d49d39ffeaf721de56286212dd.png"
+                                    alt="Long Body Bib Cock"></div><h4
+                                class="gallery-item__name">Long Body Bib
+                                Cock</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/4704f21c9274f87c17c605e4a5164eab.png"
+                                    alt="Pillar Cock"></div><h4
+                                class="gallery-item__name">Pillar Cock</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/d24250c2e66c251c7b398bbbe564d415.png"
+                                    alt="Swan Neck"></div><h4
+                                class="gallery-item__name">Swan Neck</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/43e4a695c52ce543ba5121164a21b305.png"
+                                    alt="Angle Cock"></div><h4
+                                class="gallery-item__name">Angle Cock</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/9898f4c50217a83eef607e2e7dc66657.png"
+                                    alt="Sink Cock"></div><h4
+                                class="gallery-item__name">Sink Cock</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/9e1773f58b76a6d122d37260d202d303.png"
+                                    alt="Two Way Angle Cock"></div><h4
+                                class="gallery-item__name">Two Way Angle
+                                Cock</h4></a>
+                        <a href="#" class="gallery-item"><div
+                                class="gallery-item__image"><img
+                                    src="https://www.vectus.in/assets/uploads/pipe_fitting/08d1c33a9debe57de73189dee6e928dc.png"
+                                    alt="Push Cock"></div><h4
+                                class="gallery-item__name">Push Cock</h4></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= TECHNICAL DETAILS SECTION ======================= -->
+            <section class="section details-section">
+                <div class="container">
+                    <div class="details-content">
+                        <div class="details-image">
+                            <img
+                                src="https://m.media-amazon.com/images/I/61Hx-zKNw1L.jpg"
+                                alt="Modern bathroom with sleek taps">
+                        </div>
+                        <div class="details-text">
+                            <p class="subtitle">The Science of Simplicity</p>
+                            <h2>What is PTMT?</h2>
+                            <p>Polytetra Methylene Terephthalate (PTMT) is an
+                                engineered plastic that offers the best of both
+                                worlds. Launched in India within the last
+                                decade, it has quickly become the preferred
+                                choice for premium plastic taps and sanitary
+                                materials.</p>
+                            <p>Its unique properties provide exceptional
+                                durability against environmental stress,
+                                preventing cracks and scratches, while
+                                maintaining a lightweight and easy-to-clean
+                                profile.</p>
+                            <a
+                                href="https://www.vectus.in/assets/uploads/product_item/e262d570af2068dbd1fc2818f594e63a.pdf"
+                                target="_blank"
+                                class="btn btn--primary">Download Brochure</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= FAQ SECTION ======================= -->
+            <section id="faq" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="subtitle">Got Questions?</p>
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <details>
+                                <summary>What is the difference between PVC and
+                                    PTMT?</summary>
+                                <div class="faq-answer">
+                                    <p>While both are polymers, PTMT is
+                                        considered an "engineered plastic"
+                                        produced via condensation
+                                        polymerization. This gives it superior
+                                        hardness, a glossy finish, and higher
+                                        resistance to environmental stress and
+                                        scratches compared to standard PVC.</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="faq-item">
+                            <details>
+                                <summary>What are the main advantages of plastic
+                                    taps?</summary>
+                                <div class="faq-answer">
+                                    <p>Vectus PTMT taps are resistant to
+                                        corrosion, require less energy to
+                                        produce and transport, and are
+                                        incredibly durable. Their robust nature,
+                                        combined with tensile strength and
+                                        abrasion resistance, makes them a
+                                        perfect, long-lasting fit for any
+                                        plumbing system.</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="faq-item">
+                            <details>
+                                <summary>How do I clean my Vectus plastic
+                                    tap?</summary>
+                                <div class="faq-answer">
+                                    <p>Cleaning is simple. Use a mild soap
+                                        solution or a mix of vinegar and water.
+                                        Gently scrub with a soft cloth to remove
+                                        any dirt. Avoid using harsh chemical
+                                        cleaners or abrasive pads to maintain
+                                        the tap's brilliant shine and
+                                        longevity.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ======================= FOOTER ======================= -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column about-col">
+                        <a href="https://www.vectus.in/"
+                            class="footer-logo">Vectus <span>Flow</span></a>
+                        <p>A premier brand by Vectus Polymers Private Limited,
+                            dedicated to innovating and manufacturing
+                            high-quality water management and bathware
+                            solutions.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a
+                                    href="https://www.vectus.in/water-storage-tanks">Water
+                                    Storage</a></li>
+                            <li><a
+                                    href="https://www.vectus.in/bathware">Bathware</a></li>
+                            <li><a
+                                    href="https://www.vectus.in/moulding-items">Household
+                                    Items</a></li>
+                            <li><a href="https://www.vectus.in/products">All
+                                    Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="https://www.vectus.in/about-us">About
+                                    Us</a></li>
+                            <li><a
+                                    href="https://www.vectus.in/blog">Blog</a></li>
+                            <li><a
+                                    href="https://www.vectus.in/careers/life-at-vectus">Careers</a></li>
+                            <li><a
+                                    href="https://www.vectus.in/contact-us">Contact
+                                    Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Customer Care</h4>
+                        <p>Toll-Free Number:</p>
+                        <p><a href="tel:18002026666"
+                                style="font-size: 1.1rem; color: var(--light-bg); font-weight: 600;">1800-202-6666</a></p>
+                        <p>Email:</p>
+                        <p><a
+                                href="mailto:info@vectus.in">info@vectus.in</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© <span id="year"></span> <strong>Vectus Polymers Private
+                            Limited</strong>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    </body>
+</html>

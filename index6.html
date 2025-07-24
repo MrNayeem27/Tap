@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AURA PLAST | Innovative Polymer Taps for Global Markets</title>
+        <meta name="description"
+            content="AURA PLAST is a leading manufacturer and exporter of high-grade PTMT and polymer taps. Discover our range of durable, stylish, and engineered fixtures for global partners.">
+        <meta name="keywords"
+            content="plastic taps, polymer faucets, PTMT taps, tap manufacturer, tap exporter, CPVC fittings, plumbing solutions, AURA PLAST">
+        <link rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500&display=swap"
+            rel="stylesheet">
+
+        <style>
+        /* --- ROOT VARIABLES & MODERN RESET --- */
+        :root {
+            --dark-bg: #111111;
+            --light-bg: #F8F7F5;
+            /* CUSTOMIZED: New color palette for a tech/water feel */
+            --accent-color: #0A84FF; /* Vibrant Tech Blue */
+            --accent-color-light: #85c1ff;
+            --text-light: #EAEAEA;
+            --text-dark: #1F1F1F;
+            --text-muted: #888888;
+            --border-color: #2a2a2a;
+
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            --container-width: 1240px;
+            --radius: 12px;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            --transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* All other base styles remain the same (Reset, Typography, Layout) */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--dark-bg); color: var(--text-light); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; line-height: 1.1; color: var(--text-light); text-wrap: balance; }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); }
+        h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+        p { color: var(--text-muted); margin-bottom: 1rem; }
+        a { text-decoration: none; color: var(--accent-color); transition: color var(--transition); }
+        a:hover { color: var(--accent-color-light); }
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 7rem 0; }
+        .section-header { text-align: center; margin-bottom: 4rem; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .section-header .subtitle { font-family: var(--font-body); font-weight: 500; color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; display: block; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s var(--transition), transform 1s var(--transition); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .btn { display: inline-block; background-color: var(--accent-color); color: var(--text-light); padding: 1rem 2.5rem; border-radius: 50px; font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all var(--transition); border: 2px solid var(--accent-color); }
+        .btn:hover { background-color: transparent; color: var(--accent-color); }
+        .site-header { padding: 1.5rem 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; transition: background-color 0.3s ease, padding 0.3s ease; }
+        .site-header.scrolled { background-color: rgba(17, 17, 17, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; letter-spacing: 2px; color: var(--text-light); }
+        .main-nav ul { list-style: none; display: flex; gap: 2.5rem; }
+        .main-nav a { color: var(--text-light); font-weight: 500; position: relative; }
+        .main-nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0%; height: 2px; background-color: var(--accent-color); transition: width var(--transition); }
+        .main-nav a:hover::after { width: 100%; }
+        .menu-toggle { display: none; }
+        
+        /* --- HERO SECTION --- */
+        .hero { padding-top: 12rem; padding-bottom: 8rem; text-align: center; position: relative; overflow: hidden; }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            width: 150%; height: 100%;
+            /* CUSTOMIZED: Gradient matches new blue accent */
+            background: radial-gradient(circle, rgba(10, 132, 255, 0.1) 0%, rgba(10, 132, 255, 0) 60%);
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .hero__content { position: relative; z-index: 2; }
+        .hero h1 { margin-bottom: 1.5rem; }
+        .hero .tagline { font-size: 1.2rem; max-width: 650px; margin: 0 auto 2.5rem auto; color: var(--text-muted); }
+        .hero__product-visual { margin-top: 4rem; display: flex; justify-content: center; perspective: 1000px; }
+        .hero__product-image { width: 100%; max-width: 450px; height: auto; transform-style: preserve-3d; transition: transform 0.1s linear; }
+
+        /* --- MARQUEE SECTION --- */
+        .marquee { padding: 2rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); overflow: hidden; white-space: nowrap; }
+        .marquee__content { display: inline-block; animation: marquee 30s linear infinite; }
+        .marquee__item { display: inline-block; margin: 0 3rem; font-family: var(--font-heading); font-weight: 700; color: var(--text-muted); font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; }
+        .marquee__item span { color: var(--accent-color); margin-right: 0.5rem; }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* --- COMMITMENT SECTION (was Philosophy) --- */
+        .commitment-grid { display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 5rem; }
+        .commitment__image-wrapper { border-radius: var(--radius); overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .commitment__image-wrapper img { width: 100%; display: block; }
+        
+        /* --- COLLECTIONS SECTION --- */
+        .collections { background-color: var(--light-bg); }
+        .collections h2, .collections p { color: var(--text-dark); }
+        .collections .section-header .subtitle { color: var(--accent-color); }
+        .collections .section-header p { color: #555; }
+        .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .collection-card { background-color: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: all var(--transition); position: relative; }
+        .collection-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .collection-card__image { height: 400px; background-size: cover; background-position: center; }
+        .collection-card__content { padding: 1.5rem; }
+        .collection-card h3 { color: var(--text-dark); margin-bottom: 0.5rem; }
+        .collection-card p { font-size: 0.9rem; margin-bottom: 0; }
+        .collection-card__link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 0; }
+
+        /* --- MANUFACTURING SECTION (was Design Process) --- */
+        .manufacturing-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+        .manufacturing-image-wrapper { border-radius: var(--radius); overflow: hidden; position: relative; min-height: 500px; }
+        .manufacturing-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.6s ease; }
+        .manufacturing-image.active { opacity: 1; }
+        .manufacturing-tabs .tab { padding: 2rem; border: 1px solid var(--border-color); border-radius: var(--radius); margin-bottom: 1.5rem; cursor: pointer; transition: all var(--transition); }
+        .manufacturing-tabs .tab:hover { border-color: var(--accent-color-light); transform: scale(1.02); }
+        .manufacturing-tabs .tab.active { border-color: var(--accent-color); background-color: rgba(10, 132, 255, 0.05); }
+        .tab h3 { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+        .tab h3 .tab-number { color: var(--text-muted); font-size: 0.9rem; }
+        .tab.active h3, .tab.active h3 .tab-number { color: var(--accent-color); }
+        .tab p { font-size: 0.95rem; }
+        
+        /* --- CTA SECTION --- */
+        .cta-section { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1562813636-a84a51f9037a?q=80&w=2070&auto=format&fit=crop) center/cover no-repeat fixed; text-align: center; }
+        .cta-section h2 { max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 1.5rem; }
+        .cta-section p { max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem; }
+        
+        /* --- FOOTER --- */
+        .site-footer { background-color: #0c0c0c; padding-top: 5rem; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; padding-bottom: 4rem; }
+        .footer-column h4 { color: var(--text-light); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a, .footer-column p { font-size: 0.95rem; color: var(--text-muted); }
+        .footer-logo { font-size: 2rem; }
+        .footer-bottom { padding: 2rem 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; color: var(--text-muted); }
+        .footer-bottom strong { color: var(--text-light); }
+        
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 992px) {
+            .main-nav { display: none; } .menu-toggle { display: block; }
+            .commitment-grid, .manufacturing-grid { grid-template-columns: 1fr; }
+            .commitment__image-wrapper { margin-top: 3rem; order: -1; }
+            .manufacturing-image-wrapper { min-height: 300px; }
+            .collection-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-column.about-col { grid-column: 1 / -1; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 5rem 0; } .hero { padding-top: 10rem; } .header-content .btn { display: none; }
+            .collection-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">AURA PLAST</a>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#collections">Products</a></li>
+                            <li><a href="#commitment">Our Commitment</a></li>
+                            <li><a href="#manufacturing">Manufacturing</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#contact" class="btn">Become a Distributor</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- ======================= HERO ======================= -->
+            <section class="hero">
+                <div class="hero__content container">
+                    <h1 class="reveal">The Future of Flow</h1>
+                    <p class="tagline reveal" style="transition-delay: 0.1s;">We
+                        merge advanced polymer science with contemporary design
+                        to create durable, stylish, and high-performance plastic
+                        taps for residential and commercial projects
+                        worldwide.</p>
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <a href="#collections" class="btn">Explore Our
+                            Products</a>
+                    </div>
+                    <div class="hero__product-visual reveal"
+                        style="transition-delay: 0.3s;">
+                        <img
+                            src="https://i.ibb.co/hWkgrTf/auraplast-tap-white.png"
+                            alt="AURA PLAST modern white polymer tap"
+                            class="hero__product-image" data-tilt>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= MARQUEE ======================= -->
+            <section class="marquee">
+                <div class="marquee__content">
+                    <span class="marquee__item"><span>//</span> Advanced Polymer
+                        Engineering</span>
+                    <span class="marquee__item"><span>//</span> Global Export
+                        Standards</span>
+                    <span class="marquee__item"><span>//</span> Leak-Proof
+                        Technology</span>
+                    <span class="marquee__item"><span>//</span> Vibrant Color
+                        Options</span>
+                    <span class="marquee__item"><span>//</span> ISO 9001
+                        Certified</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span class="marquee__item"><span>//</span> Advanced Polymer
+                        Engineering</span>
+                    <span class="marquee__item"><span>//</span> Global Export
+                        Standards</span>
+                    <span class="marquee__item"><span>//</span> Leak-Proof
+                        Technology</span>
+                    <span class="marquee__item"><span>//</span> Vibrant Color
+                        Options</span>
+                    <span class="marquee__item"><span>//</span> ISO 9001
+                        Certified</span>
+                </div>
+            </section>
+
+            <!-- ======================= OUR COMMITMENT ======================= -->
+            <section id="commitment" class="section">
+                <div class="container">
+                    <div class="commitment-grid">
+                        <div class="commitment__text">
+                            <div class="section-header reveal"
+                                style="text-align: left; margin: 0 0 2rem 0;">
+                                <span class="subtitle">Our Commitment</span>
+                                <h2>Quality in Every Component</h2>
+                            </div>
+                            <p class="reveal">At AURA PLAST, we challenge the
+                                conventions of tapware. Our focus is on
+                                leveraging the unique strengths of engineered
+                                polymers like PTMT to deliver products that are
+                                not just alternatives to metal, but superior in
+                                many applications.</p>
+                            <p class="reveal">Our taps offer exceptional
+                                resistance to corrosion and hard water scaling,
+                                ensuring longevity and consistent performance.
+                                Through rigorous R&D, we produce lightweight,
+                                robust, and cost-effective solutions without
+                                compromising on design.</p>
+                        </div>
+                        <div class="commitment__image-wrapper reveal">
+                            <img
+                                src="https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?q=80&w=2070&auto=format&fit=crop"
+                                alt="Close-up of polymer granules showing material science">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= COLLECTIONS ======================= -->
+            <section id="collections" class="section collections">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="subtitle">Product Lines</span>
+                        <h2>Engineered for Every Need</h2>
+                        <p>From high-traffic commercial spaces to stylish
+                            residential kitchens, our product lines are designed
+                            to deliver targeted performance and aesthetic
+                            appeal.</p>
+                    </div>
+                    <div class="collection-grid">
+                        <div class="collection-card reveal">
+                            <div class="collection-card__image"
+                                style="background-image: url('https://i.ibb.co/3kMv0xY/collection-hydro.jpg')"></div>
+                            <div class="collection-card__content">
+                                <h3>The Hydro Series</h3>
+                                <p>The workhorse. Built for durability and
+                                    high-frequency use.</p>
+                            </div>
+                            <a href="#" class="collection-card__link"
+                                aria-label="View The Hydro Series"></a>
+                        </div>
+                        <div class="collection-card reveal"
+                            style="transition-delay: 0.1s;">
+                            <div class="collection-card__image"
+                                style="background-image: url('https://i.ibb.co/L9H8b4k/collection-vivid.jpg')"></div>
+                            <div class="collection-card__content">
+                                <h3>The Vivid Series</h3>
+                                <p>Bring spaces to life with our range of bold,
+                                    UV-resistant colors.</p>
+                            </div>
+                            <a href="#" class="collection-card__link"
+                                aria-label="View The Vivid Series"></a>
+                        </div>
+                        <div class="collection-card reveal"
+                            style="transition-delay: 0.2s;">
+                            <div class="collection-card__image"
+                                style="background-image: url('https://i.ibb.co/d6x48Fk/collection-forma.jpg')"></div>
+                            <div class="collection-card__content">
+                                <h3>The Forma Series</h3>
+                                <p>Architecturally inspired designs where form
+                                    meets function.</p>
+                            </div>
+                            <a href="#" class="collection-card__link"
+                                aria-label="View The Forma Series"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= MANUFACTURING EXCELLENCE ======================= -->
+            <section id="manufacturing" class="section">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="subtitle">How It's Made</span>
+                        <h2>Manufacturing Excellence</h2>
+                    </div>
+                    <div class="manufacturing-grid">
+                        <div class="manufacturing-tabs reveal">
+                            <div class="tab active" data-image-id="1">
+                                <h3><span class="tab-number">01</span>Design &
+                                    Prototyping</h3>
+                                <p>Our process begins in our digital lab, where
+                                    we use CAD and flow simulation to design for
+                                    perfect ergonomics, easy installation, and
+                                    flawless water delivery.</p>
+                            </div>
+                            <div class="tab" data-image-id="2">
+                                <h3><span class="tab-number">02</span>Polymer &
+                                    Injection Molding</h3>
+                                <p>We use only virgin, high-grade PTMT and other
+                                    polymers. Our state-of-the-art injection
+                                    molding facility ensures every component is
+                                    created with sub-millimeter precision.</p>
+                            </div>
+                            <div class="tab" data-image-id="3">
+                                <h3><span class="tab-number">03</span>Quality &
+                                    Global Logistics</h3>
+                                <p>Each tap undergoes rigorous pressure testing
+                                    and a 20-point quality check. Products are
+                                    then securely packaged for efficient,
+                                    reliable export to our partners
+                                    worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="manufacturing-image-wrapper reveal">
+                            <img
+                                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop"
+                                class="manufacturing-image active"
+                                id="process-img-1"
+                                alt="Engineers collaborating over a digital blueprint">
+                            <img
+                                src="https://images.unsplash.com/photo-1621921133936-547443d42879?q=80&w=1974&auto=format&fit=crop"
+                                class="manufacturing-image" id="process-img-2"
+                                alt="State-of-the-art injection molding machinery in a factory">
+                            <img
+                                src="https://images.unsplash.com/photo-1581092916323-e578c7717e0a?q=80&w=2070&auto=format&fit=crop"
+                                class="manufacturing-image" id="process-img-3"
+                                alt="Quality control specialist inspecting a product">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================= CTA ======================= -->
+            <section id="contact" class="section cta-section">
+                <div class="container reveal">
+                    <h2>Partner with a Global Leader in Polymer Tapware</h2>
+                    <p>We are actively seeking distributors, developers, and
+                        importers. Join us to bring innovative and reliable
+                        plumbing solutions to your market.</p>
+                    <a href="mailto:sales@auraplast.com" class="btn">Request a
+                        Catalogue</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column about-col">
+                        <a href="#" class="logo footer-logo">AURA PLAST</a>
+                        <p>Engineering the future of flow with advanced polymer
+                            solutions for the global market.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Product Lines</h4>
+                        <ul>
+                            <li><a href="#">Hydro Series</a></li>
+                            <li><a href="#">Vivid Series</a></li>
+                            <li><a href="#">Forma Series</a></li>
+                            <li><a href="#">All Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About AURA PLAST</a></li>
+                            <li><a href="#">Distributor Program</a></li>
+                            <li><a href="#">Certifications</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Global Sales</h4>
+                        <p>For inquiries & partnerships</p>
+                        <p><a
+                                href="mailto:sales@auraplast.com">sales@auraplast.com</a></p>
+                        <p>+91 123 456 7890</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© <span id="year"></span> <strong>AURA PLAST
+                            Manufacturing Co.</strong> All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript for Interactivity -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            VanillaTilt.init(document.querySelector("[data-tilt]"), {
+                max: 15,
+                speed: 400,
+                glare: true,
+                "max-glare": 0.2,
+                perspective: 1000,
+                scale: 1.05
+            });
+
+            const header = document.querySelector('.site-header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+        
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(el => observer.observe(el));
+        
+            const tabs = document.querySelectorAll('.manufacturing-tabs .tab');
+            const images = document.querySelectorAll('.manufacturing-image');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    images.forEach(i => i.classList.remove('active'));
+                    tab.classList.add('active');
+                    const imageId = tab.getAttribute('data-image-id');
+                    document.getElementById(`process-img-${imageId}`).classList.add('active');
+                });
+            });
+        
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+    </body>
+</html>
